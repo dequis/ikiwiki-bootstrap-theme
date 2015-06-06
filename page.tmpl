@@ -53,24 +53,8 @@
 <div class="container-fluid">
         <article class="page">
             <section class="pageheader">
-                <h1>
-                    <ol class="breadcrumb">
-                        <TMPL_LOOP PARENTLINKS>
-                        <li class="parentlinks">
-                            <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
-                        </li>
-                        </TMPL_LOOP>
-                        <li class="active">
-                            <TMPL_VAR TITLE>
-                            <TMPL_IF ISTRANSLATION>
-                            (<TMPL_VAR PERCENTTRANSLATED>%)
-                            </TMPL_IF>
-                        </li>
-                    </ol>
-                </h1>
-
-                    <div class="container">
-                        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <div class="pull-right">
+                    <div class="container-fluid">
                             <TMPL_IF HAVE_ACTIONS>
                             <ul class="nav navbar-nav">
                                 <TMPL_IF EDITURL>
@@ -108,7 +92,6 @@
                             <TMPL_VAR SEARCHFORM>
                             </TMPL_IF>
                             </TMPL_UNLESS>
-                        </div>
                     </div>
 
                 <TMPL_IF OTHERLANGUAGES>
@@ -131,6 +114,24 @@
                 <TMPL_UNLESS DYNAMIC>
                 <TMPL_VAR TRAILS>
                 </TMPL_UNLESS>
+                </div>
+
+                <h1>
+                    <ol class="breadcrumb" style="margin-bottom: 0">
+                        <TMPL_LOOP PARENTLINKS>
+                        <li class="parentlinks">
+                            <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
+                        </li>
+                        </TMPL_LOOP>
+                        <li class="active">
+                            <TMPL_VAR TITLE>
+                            <TMPL_IF ISTRANSLATION>
+                            (<TMPL_VAR PERCENTTRANSLATED>%)
+                            </TMPL_IF>
+                        </li>
+                    </ol>
+                </h1>
+
 
             </section>
 
