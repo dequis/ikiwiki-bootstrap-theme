@@ -1,4 +1,4 @@
-<form <TMPL_IF POSTFORMID>id="<TMPL_VAR POSTFORMID ESCAPE=HTML>"</TMPL_IF> action="<TMPL_VAR CGIURL>" method="get">
+<form <TMPL_IF POSTFORMID>id="<TMPL_VAR POSTFORMID ESCAPE=HTML>"</TMPL_IF> action="<TMPL_VAR CGIURL>" method="get" class="form-inline">
 <div class="blogform">
 <TMPL_IF RSSURL>
 <a class="feedbutton" type="application/rss+xml" rel="alternate" title="<TMPL_VAR RSSDESC>" href="<TMPL_VAR RSSURL>">RSS</a>
@@ -10,7 +10,7 @@
 <input type="hidden" name="from" value="<TMPL_VAR ROOTPAGE>" />
 <input type="hidden" name="subpage" value="1" />
 <TMPL_VAR POSTFORMTEXT>
-<input name="title" size="40" />
-<input type="submit" value="Edit" />
+<input class="form-control" name="title" size="40" />
+<input class="btn btn-default" type="submit" value="Edit" />
 </div>
 </form>
